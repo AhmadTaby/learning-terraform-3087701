@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
-vpc_security_group_ids = [aws.security.group.id]
+vpc_security_group_ids = [aws.security.group.blog.id]
   tags = {
     Name = "Learning Terraform"
   }
